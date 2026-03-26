@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club de Activos - Plataforma de Gestión de Activos de Sponsoreo">
+    <title>Iniciar Sesión | Club de Activos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-card">
+            <div class="login-logo">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="64" height="64" rx="16" fill="#1a365d"/>
+                    <path d="M20 44V20h8c6.627 0 12 5.373 12 12s-5.373 12-12 12h-8z" fill="#d69e2e"/>
+                    <circle cx="44" cy="32" r="8" fill="#fff"/>
+                </svg>
+                <span class="login-logo-text">Club de Activos</span>
+                <span class="login-subtitle">OpenCore / Grupo Wateke</span>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <div class="input-group">
+                        <span class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                        </span>
+                        <input
+                            type="email"
+                            class="form-input"
+                            id="email"
+                            name="email"
+                            placeholder="tu@email.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    <span class="form-error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Contraseña</label>
+                    <div class="input-group">
+                        <span class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </span>
+                        <input
+                            type="password"
+                            class="form-input"
+                            id="password"
+                            name="password"
+                            placeholder="Tu contraseña"
+                            required
+                            autocomplete="current-password"
+                        >
+                        <button type="button" class="btn btn-ghost btn-icon" id="togglePassword" style="position: absolute; right: 4px; top: 50%; transform: translateY(-50%);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="eyeIcon">
+                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="form-error" id="passwordError"></span>
+                </div>
+
+                <div id="loginError" class="form-error text-center mb-4" style="display: none;"></div>
+
+                <button type="submit" class="btn btn-primary w-full btn-lg" id="submitBtn">
+                    <span id="btnText">Iniciar sesión</span>
+                    <span id="btnSpinner" class="spinner" style="display: none;"></span>
+                </button>
+            </form>
+
+            <a href="#" class="login-forgot">Olvidé mi contraseña</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('loginForm');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const togglePassword = document.getElementById('togglePassword');
+            const eyeIcon = document.getElementById('eyeIcon');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+            const loginError = document.getElementById('loginError');
+
+            // Toggle password visibility
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.type === 'password' ? 'text' : 'password';
+                passwordInput.type = type;
+
+                // Update icon
+                if (type === 'text') {
+                    eyeIcon.innerHTML = '<path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/>';
+                } else {
+                    eyeIcon.innerHTML = '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>';
+                }
+            });
+
+            // Form validation
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            function showError(input, errorElement, message) {
+                input.classList.add('error');
+                errorElement.textContent = message;
+            }
+
+            function clearError(input, errorElement) {
+                input.classList.remove('error');
+                errorElement.textContent = '';
+            }
+
+            emailInput.addEventListener('blur', function() {
+                const emailError = document.getElementById('emailError');
+                if (!this.value) {
+                    showError(this, emailError, 'El email es requerido');
+                } else if (!validateEmail(this.value)) {
+                    showError(this, emailError, 'Ingresá un email válido');
+                } else {
+                    clearError(this, emailError);
+                }
+            });
+
+            passwordInput.addEventListener('blur', function() {
+                const passwordError = document.getElementById('passwordError');
+                if (!this.value) {
+                    showError(this, passwordError, 'La contraseña es requerida');
+                } else {
+                    clearError(this, passwordError);
+                }
+            });
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Clear previous errors
+                loginError.style.display = 'none';
+                clearError(emailInput, document.getElementById('emailError'));
+                clearError(passwordInput, document.getElementById('passwordError'));
+
+                let hasError = false;
+
+                if (!emailInput.value) {
+                    showError(emailInput, document.getElementById('emailError'), 'El email es requerido');
+                    hasError = true;
+                } else if (!validateEmail(emailInput.value)) {
+                    showError(emailInput, document.getElementById('emailError'), 'Ingresá un email válido');
+                    hasError = true;
+                }
+
+                if (!passwordInput.value) {
+                    showError(passwordInput, document.getElementById('passwordError'), 'La contraseña es requerida');
+                    hasError = true;
+                }
+
+                if (hasError) return;
+
+                // Show loading state
+                submitBtn.disabled = true;
+                btnText.style.display = 'none';
+                btnSpinner.style.display = 'block';
+
+                // Simulate API call
+                setTimeout(function() {
+                    // For demo purposes, accept any email with password "demo123"
+                    if (passwordInput.value === 'demo123') {
+                        // Redirect to dashboard
+                        window.location.href = 'dashboard.html';
+                    } else {
+                        // Show error
+                        loginError.textContent = 'Email o contraseña incorrectos';
+                        loginError.style.display = 'block';
+                        submitBtn.disabled = false;
+                        btnText.style.display = 'block';
+                        btnSpinner.style.display = 'none';
+                    }
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club de Activos - Listado de Activos">
+    <title>Activos | Club de Activos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../dashboard.html" class="sidebar-logo">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#d69e2e"/>
+                        <path d="M10 22V10h4c3.314 0 6 2.686 6 6s-2.686 6-6 6h-4z" fill="#1a365d"/>
+                        <circle cx="22" cy="16" r="4" fill="#fff"/>
+                    </svg>
+                    <span>Club de Activos</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="7" height="9" x="3" y="3" rx="1"/>
+                        <rect width="7" height="5" x="14" y="3" rx="1"/>
+                        <rect width="7" height="9" x="14" y="12" rx="1"/>
+                        <rect width="7" height="5" x="3" y="16" rx="1"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="index.html" class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+                        <path d="M10 6h4"/>
+                        <path d="M10 10h4"/>
+                        <path d="M10 14h4"/>
+                        <path d="M10 18h4"/>
+                    </svg>
+                    <span>Activos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 2v4"/>
+                        <path d="M16 2v4"/>
+                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                        <path d="M3 10h18"/>
+                    </svg>
+                    <span>Calendario General</span>
+                </a>
+                <a href="../notificaciones.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+                    </svg>
+                    <span>Notificaciones</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="btn btn-ghost btn-icon" id="menuToggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"/>
+                            <line x1="4" x2="20" y1="6" y2="6"/>
+                            <line x1="4" x2="20" y1="18" y2="18"/>
+                        </svg>
+                    </button>
+                    <div class="header-search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.3-4.3"/>
+                        </svg>
+                        <input type="text" class="form-input" placeholder="Buscar activo..." id="searchInput">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notification-btn dropdown">
+                        <button class="btn btn-ghost btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+                            </svg>
+                            <span class="notification-badge">5</span>
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="flex items-center gap-2">
+                            <div class="avatar">JQ</div>
+                            <span class="text-sm font-medium">Joaquín</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="page-content">
+                <div class="page-header flex justify-between items-center">
+                    <div>
+                        <h1 class="page-title">Activos</h1>
+                        <p class="page-subtitle">Gestioná el portfolio de oportunidades de sponsoreo</p>
+                    </div>
+                    <a href="nuevo.html" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14"/>
+                            <path d="M5 12h14"/>
+                        </svg>
+                        Nuevo Activo
+                    </a>
+                </div>
+
+                <!-- Filters Bar -->
+                <div class="card mb-6">
+                    <div class="card-body py-4">
+                        <div class="flex items-center gap-4 flex-wrap">
+                            <div class="form-group mb-0" style="min-width: 200px;">
+                                <select class="form-select" id="categoryFilter">
+                                    <option value="">Todas las categorías</option>
+                                    <option value="deportes">Deportes</option>
+                                    <option value="naturaleza">Naturaleza/Outdoor</option>
+                                    <option value="hoteleria">Hotelería</option>
+                                    <option value="eventos">Eventos en Vivo</option>
+                                    <option value="cultural">Cultural</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-0" style="min-width: 180px;">
+                                <select class="form-select" id="statusFilter">
+                                    <option value="">Todos los estados</option>
+                                    <option value="activo">Activo</option>
+                                    <option value="archivado">Archivado</option>
+                                    <option value="proximamente">Próximamente</option>
+                                </select>
+                            </div>
+                            <div class="flex gap-2 ml-auto">
+                                <button class="btn btn-ghost btn-icon active" id="viewCards" title="Vista de tarjetas">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="7" height="7" x="3" y="3" rx="1"/>
+                                        <rect width="7" height="7" x="14" y="3" rx="1"/>
+                                        <rect width="7" height="7" x="14" y="14" rx="1"/>
+                                        <rect width="7" height="7" x="3" y="14" rx="1"/>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-ghost btn-icon" id="viewTable" title="Vista de tabla">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="3" x2="21" y1="6" y2="6"/>
+                                        <line x1="3" x2="21" y1="12" y2="12"/>
+                                        <line x1="3" x2="21" y1="18" y2="18"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards View -->
+                <div class="grid grid-cols-3 gap-6" id="cardsView">
+                    <!-- BBVA Padel Network -->
+                    <div class="asset-card" data-category="deportes" data-status="reservado">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/padel-bbva/800/450" alt="BBVA Padel Network">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-deportes">Deportes</span>
+                                <span class="badge badge-info">Reservado</span>
+                            </div>
+                            <h3 class="asset-card-title">BBVA Padel Network</h3>
+                            <p class="text-sm text-muted mb-3">150 canchas de padel premium en Argentina</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Buenos Aires, Argentina
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-muted">Reservado por BBVA — 2026</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+
+                    <!-- Las Leñas Ski Resort -->
+                    <div class="asset-card" data-category="naturaleza" data-status="renovando">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/ski-resort-las-lenas/800/450" alt="Las Leñas Ski Resort">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-naturaleza">Naturaleza/Outdoor</span>
+                                <span class="badge badge-warning">Renovando</span>
+                            </div>
+                            <h3 class="asset-card-title">Las Leñas Ski Resort</h3>
+                            <p class="text-sm text-muted mb-3">Centro de esquí premium en Mendoza</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Mendoza, Argentina
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-warning">Renovando contrato — vence en 15 días</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+
+                    <!-- BIG Gymnasium -->
+                    <div class="asset-card" data-category="deportes" data-status="activo">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/gym-big/800/450" alt="BIG Gymnasium">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-deportes">Deportes</span>
+                                <span class="badge badge-success">Activo</span>
+                            </div>
+                            <h3 class="asset-card-title">BIG Gymnasium</h3>
+                            <p class="text-sm text-muted mb-3">Cadena de gimnasios de alto rendimiento</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Buenos Aires, Argentina
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-success">Activo — 3 años</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+
+                    <!-- Arturo Navarro Hotels -->
+                    <div class="asset-card" data-category="hoteleria" data-status="activo">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/hotel-luxury/800/450" alt="Arturo Navarro Hotels">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-hoteleria">Hotelería</span>
+                                <span class="badge badge-success">Activo</span>
+                            </div>
+                            <h3 class="asset-card-title">Arturo Navarro Hotels</h3>
+                            <p class="text-sm text-muted mb-3">Red de 33 hoteles boutique en Argentina</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Argentina (nacional)
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-success">Activo — 3 años</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+
+                    <!-- Auditorio Mar del Plata -->
+                    <div class="asset-card" data-category="cultural" data-status="activo">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/theater-auditorium/800/450" alt="Auditorio Mar del Plata">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-cultural">Cultural</span>
+                                <span class="badge badge-success">Activo</span>
+                            </div>
+                            <h3 class="asset-card-title">Auditorio Mar del Plata</h3>
+                            <p class="text-sm text-muted mb-3">Principal auditorio de la costa atlántica</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Mar del Plata, Argentina
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-success">Activo — 3 años</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+
+                    <!-- La Uría -->
+                    <div class="asset-card" data-category="eventos" data-status="nda">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/concert-venue/800/450" alt="La Uría">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-eventos">Eventos en Vivo</span>
+                                <span class="badge badge-primary">NDA Firmado</span>
+                            </div>
+                            <h3 class="asset-card-title">La Uría</h3>
+                            <p class="text-sm text-muted mb-3">120 eventos anuales de alta convocatoria</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Buenos Aires, Argentina
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-primary">NDA firmado — En negociación</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+
+                    <!-- Teatro Colón -->
+                    <div class="asset-card" data-category="cultural" data-status="activo">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/theater-colon/800/450" alt="Teatro Colón">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-cultural">Cultural</span>
+                                <span class="badge badge-success">Activo</span>
+                            </div>
+                            <h3 class="asset-card-title">Teatro Colón</h3>
+                            <p class="text-sm text-muted mb-3">Icono cultural de Argentina y el mundo</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Buenos Aires, Argentina
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-success">Activo — Continuo</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+
+                    <!-- Ricky Martin — Abierto del Polo -->
+                    <div class="asset-card" data-category="eventos" data-status="cerrando">
+                        <div class="asset-card-image">
+                            <img src="https://picsum.photos/seed/concert-polo/800/450" alt="Ricky Martin — Abierto del Polo">
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="asset-card-badges">
+                                <span class="badge badge-eventos">Eventos en Vivo</span>
+                                <span class="badge badge-secondary">Cerrando</span>
+                            </div>
+                            <h3 class="asset-card-title">Ricky Martin — Abierto del Polo</h3>
+                            <p class="text-sm text-muted mb-3">Evento exclusivo de cierre de temporada</p>
+                            <div class="asset-card-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Buenos Aires, Argentina
+                            </div>
+                        </div>
+                        <div class="asset-card-footer flex justify-between items-center">
+                            <span class="text-xs text-secondary">Cerrando con Mastercard</span>
+                            <a href="detalle.html" class="btn btn-sm btn-primary">Ver detalle</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table View (Hidden by default) -->
+                <div class="table-container hidden" id="tableView">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nombre</th>
+                                <th>Categoría</th>
+                                <th>Ubicación</th>
+                                <th>Estado</th>
+                                <th>Disponibilidad</th>
+                                <th>Responsable</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="https://picsum.photos/seed/padel-bbva/48/36" alt="" class="table-thumbnail"></td>
+                                <td class="font-medium">BBVA Padel Network</td>
+                                <td><span class="badge badge-deportes">Deportes</span></td>
+                                <td>Buenos Aires</td>
+                                <td><span class="badge badge-info">Reservado</span></td>
+                                <td>BBVA — 2026</td>
+                                <td>Joaquín</td>
+                                <td>
+                                    <div class="flex gap-1">
+                                        <a href="detalle.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </a>
+                                        <a href="nuevo.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://picsum.photos/seed/ski-resort-las-lenas/48/36" alt="" class="table-thumbnail"></td>
+                                <td class="font-medium">Las Leñas Ski Resort</td>
+                                <td><span class="badge badge-naturaleza">Naturaleza</span></td>
+                                <td>Mendoza</td>
+                                <td><span class="badge badge-warning">Renovando</span></td>
+                                <td>Renault — Renegociando</td>
+                                <td>Guada</td>
+                                <td>
+                                    <div class="flex gap-1">
+                                        <a href="detalle.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </a>
+                                        <a href="nuevo.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://picsum.photos/seed/gym-big/48/36" alt="" class="table-thumbnail"></td>
+                                <td class="font-medium">BIG Gymnasium</td>
+                                <td><span class="badge badge-deportes">Deportes</span></td>
+                                <td>Buenos Aires</td>
+                                <td><span class="badge badge-success">Activo</span></td>
+                                <td>Disponible</td>
+                                <td>Nahuel</td>
+                                <td>
+                                    <div class="flex gap-1">
+                                        <a href="detalle.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </a>
+                                        <a href="nuevo.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://picsum.photos/seed/hotel-luxury/48/36" alt="" class="table-thumbnail"></td>
+                                <td class="font-medium">Arturo Navarro Hotels</td>
+                                <td><span class="badge badge-hoteleria">Hotelería</span></td>
+                                <td>Nacional</td>
+                                <td><span class="badge badge-success">Activo</span></td>
+                                <td>Disponible</td>
+                                <td>Fer</td>
+                                <td>
+                                    <div class="flex gap-1">
+                                        <a href="detalle.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </a>
+                                        <a href="nuevo.html" class="btn btn-ghost btn-icon btn-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewCards = document.getElementById('viewCards');
+            const viewTable = document.getElementById('viewTable');
+            const cardsView = document.getElementById('cardsView');
+            const tableView = document.getElementById('tableView');
+
+            viewCards.addEventListener('click', function() {
+                cardsView.classList.remove('hidden');
+                tableView.classList.add('hidden');
+                viewCards.classList.add('active');
+                viewTable.classList.remove('active');
+            });
+
+            viewTable.addEventListener('click', function() {
+                tableView.classList.remove('hidden');
+                cardsView.classList.add('hidden');
+                viewTable.classList.add('active');
+                viewCards.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

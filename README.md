@@ -16,6 +16,8 @@ Primary uses:
 - This is not intended to be the main codebase for a product.
 - Treat it as an asset/output repository for mockups and presentation-ready generated material.
 - Keep the structure simple and easy to browse.
+- The root site should remain minimal and should not provide navigation to mockups.
+- Mockups are intended to be accessible only by knowing the direct GitHub Pages URL/path.
 
 ## Current contents
 
@@ -35,4 +37,4 @@ client-b/
   mobile-flow-02.png
 ```
 
-If needed, add small index pages or asset manifests so previews are easier to navigate.
+If needed, add small index pages or asset manifests so previews are easier to navigate within a given mockup path, without adding root-level navigation.

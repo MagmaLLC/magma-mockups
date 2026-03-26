@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club de Activos - Detalle del Activo">
+    <title>BBVA Padel Network | Club de Activos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../dashboard.html" class="sidebar-logo">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#d69e2e"/>
+                        <path d="M10 22V10h4c3.314 0 6 2.686 6 6s-2.686 6-6 6h-4z" fill="#1a365d"/>
+                        <circle cx="22" cy="16" r="4" fill="#fff"/>
+                    </svg>
+                    <span>Club de Activos</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="7" height="9" x="3" y="3" rx="1"/>
+                        <rect width="7" height="5" x="14" y="3" rx="1"/>
+                        <rect width="7" height="9" x="14" y="12" rx="1"/>
+                        <rect width="7" height="5" x="3" y="16" rx="1"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="index.html" class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+                    </svg>
+                    <span>Activos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 2v4"/>
+                        <path d="M16 2v4"/>
+                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                        <path d="M3 10h18"/>
+                    </svg>
+                    <span>Calendario General</span>
+                </a>
+                <a href="../notificaciones.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+                    </svg>
+                    <span>Notificaciones</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="btn btn-ghost btn-icon" id="menuToggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"/>
+                            <line x1="4" x2="20" y1="6" y2="6"/>
+                            <line x1="4" x2="20" y1="18" y2="18"/>
+                        </svg>
+                    </button>
+                    <a href="index.html" class="flex items-center gap-2 text-muted">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 19-7-7 7-7"/>
+                            <path d="M19 12H5"/>
+                        </svg>
+                        Volver a Activos
+                    </a>
+                </div>
+                <div class="header-right">
+                    <div class="dropdown">
+                        <button class="flex items-center gap-2">
+                            <div class="avatar">JQ</div>
+                            <span class="text-sm font-medium">Joaquín</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="page-content">
+                <!-- Hero Section -->
+                <div class="card mb-6 overflow-hidden">
+                    <div style="position: relative; height: 400px;">
+                        <img src="https://picsum.photos/seed/padel-bbva-hero/1920/800" alt="BBVA Padel Network" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="badge badge-deportes">Deportes</span>
+                                <span class="badge badge-info">Reservado — 2026</span>
+                            </div>
+                            <h1 style="color: white; font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">BBVA Padel Network</h1>
+                            <div class="flex items-center gap-2" style="color: rgba(255,255,255,0.8);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Buenos Aires, Argentina
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="avatar avatar-lg">JQ</div>
+                            <div>
+                                <div class="text-sm text-muted">Responsable</div>
+                                <div class="font-medium">Joaquín</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="nuevo.html" class="btn btn-outline">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                </svg>
+                                Editar
+                            </a>
+                            <button class="btn btn-outline">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                                </svg>
+                                Archivar
+                            </button>
+                            <a href="../../catalogo/activo.html" class="btn btn-primary" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" x2="21" y1="14" y2="3"/>
+                                </svg>
+                                Ver en catálogo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab active" data-tab="informacion">Información</button>
+                    <button class="tab" data-tab="disponibilidad">Disponibilidad</button>
+                    <button class="tab" data-tab="galeria">Galería</button>
+                </div>
+
+                <!-- Tab: Información -->
+                <div class="tab-content active" id="tab-informacion">
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="col-span-2">
+                            <!-- Description -->
+                            <div class="card mb-6">
+                                <div class="card-header">
+                                    <h2 class="text-lg font-semibold">Descripción</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-muted leading-relaxed">
+                                        Red premium de 150 canchas de padel en Buenos Aires y alrededores. El BBVA Padel Network es la alianza estratégica más grande del país entre una institución financiera y el deporte de mayor crecimiento en Argentina.
+                                    </p>
+                                    <p class="text-muted leading-relaxed mt-4">
+                                        Con presencia en los clubes más exclusivos de la región, ofrece oportunidades únicas de branding, activación y engagement con un público ABC1 altamente atractivo para marcas premium.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Pilares de Valor -->
+                            <div class="card mb-6">
+                                <div class="card-header">
+                                    <h2 class="text-lg font-semibold">Pilares de Valor para Sponsoreo</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="pilares-grid">
+                                        <div class="pilar-card">
+                                            <div class="pilar-icon branding">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="m3 11 18-5v12L3 14v-3z"/>
+                                                    <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="pilar-title">Branding / Comunicación</h3>
+                                            <p class="pilar-text">Naming rights en 150 canchas, cartelería digital, presencia en redes sociales con +500K seguidores, contenido exclusivo y cobertura de torneos.</p>
+                                        </div>
+                                        <div class="pilar-card">
+                                            <div class="pilar-icon monetizacion">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M3 3v18h18"/>
+                                                    <path d="m19 9-5 5-4-4-3 3"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="pilar-title">Monetización</h3>
+                                            <p class="pilar-text">Venta de productos y servicios en puntos de venta físicos, app de reservas con marketplace integrado, promociones cruzadas con base de +50K usuarios activos.</p>
+                                        </div>
+                                        <div class="pilar-card">
+                                            <div class="pilar-icon beneficios">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M20 12v10H4V12"/>
+                                                    <path d="M2 7h20v5H2z"/>
+                                                    <path d="M12 22V7"/>
+                                                    <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+                                                    <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="pilar-title">Beneficios</h3>
+                                            <p class="pilar-text">Descuentos exclusivos para clientes del sponsor, acceso prioritario a torneos, programa de fidelización con puntos canjeables.</p>
+                                        </div>
+                                        <div class="pilar-card">
+                                            <div class="pilar-icon experiencias">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="pilar-title">Experiencias</h3>
+                                            <p class="pilar-text">Eventos VIP con jugadores profesionales, clínicas de padel para ejecutivos, torneos corporativos exclusivos, meet & greet con embajadores.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Notas Internas -->
+                            <div class="internal-note">
+                                <div class="internal-note-header">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                    Notas Internas — Solo visible para el equipo
+                                </div>
+                                <p class="internal-note-text">
+                                    BBVA cerró el contrato de naming en diciembre 2025. Renovación automática por 2 años más si no se notifica con 90 días de anticipación. Contacto directo: María González (Gerente de Marketing BBVA) - muy buena relación. Explorar posibilidad de extender a otras provincias en próxima renovación.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar -->
+                        <div>
+                            <!-- Comisiones -->
+                            <div class="card mb-6">
+                                <div class="card-header">
+                                    <h3 class="font-semibold">Comisiones</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-sm text-muted">Comisión OpenCore</span>
+                                        <span class="font-semibold">25%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-muted">Comisión contacto</span>
+                                        <span class="font-semibold">15%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contacto Principal -->
+                            <div class="card mb-6">
+                                <div class="card-header">
+                                    <h3 class="font-semibold">Contacto Principal</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <div class="avatar">LB</div>
+                                        <div>
+                                            <div class="font-medium">Lisandro Borges</div>
+                                            <div class="text-sm text-muted">Owner</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <a href="tel:+541155551234" class="flex items-center gap-2 text-sm text-muted hover:text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                            </svg>
+                                            +54 11 5555-1234
+                                        </a>
+                                        <a href="mailto:lisandro@padelnetwork.com" class="flex items-center gap-2 text-sm text-muted hover:text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                            </svg>
+                                            lisandro@padelnetwork.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contrato -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="font-semibold">Contrato</h3>
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="btn btn-outline w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                            <polyline points="7 10 12 15 17 10"/>
+                                            <line x1="12" x2="12" y1="15" y2="3"/>
+                                        </svg>
+                                        Descargar PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Disponibilidad -->
+                <div class="tab-content hidden" id="tab-disponibilidad">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <div class="calendar-nav">
+                                <button class="btn btn-ghost btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                                </button>
+                                <h3 class="calendar-title">Marzo 2026</h3>
+                                <button class="btn btn-ghost btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                                </button>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn btn-sm btn-outline">Hoy</button>
+                                <select class="form-select" style="width: auto;">
+                                    <option>Mes</option>
+                                    <option>Trimestre</option>
+                                    <option>Año</option>
+                                </select>
+                                <button class="btn btn-sm btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                                    Nuevo Bloqueo
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="calendar-grid mt-6">
+                            <div class="calendar-day-header">Lun</div>
+                            <div class="calendar-day-header">Mar</div>
+                            <div class="calendar-day-header">Mié</div>
+                            <div class="calendar-day-header">Jue</div>
+                            <div class="calendar-day-header">Vie</div>
+                            <div class="calendar-day-header">Sáb</div>
+                            <div class="calendar-day-header">Dom</div>
+
+                            <!-- Week 1 -->
+                            <div class="calendar-day other-month"><span class="calendar-day-number">23</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">24</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">25</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">26</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">27</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">28</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">1</span></div>
+
+                            <!-- Week 2 -->
+                            <div class="calendar-day"><span class="calendar-day-number">2</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">3</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">4</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">5</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">6</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">7</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">8</span></div>
+
+                            <!-- Week 3 -->
+                            <div class="calendar-day"><span class="calendar-day-number">9</span></div>
+                            <div class="calendar-day">
+                                <span class="calendar-day-number">10</span>
+                                <div class="calendar-event reserved">BBVA — Firmado</div>
+                            </div>
+                            <div class="calendar-day">
+                                <span class="calendar-day-number">11</span>
+                                <div class="calendar-event reserved">BBVA — Firmado</div>
+                            </div>
+                            <div class="calendar-day">
+                                <span class="calendar-day-number">12</span>
+                                <div class="calendar-event reserved">BBVA — Firmado</div>
+                            </div>
+                            <div class="calendar-day">
+                                <span class="calendar-day-number">13</span>
+                                <div class="calendar-event reserved">BBVA — Firmado</div>
+                            </div>
+                            <div class="calendar-day">
+                                <span class="calendar-day-number">14</span>
+                                <div class="calendar-event reserved">BBVA — Firmado</div>
+                            </div>
+                            <div class="calendar-day">
+                                <span class="calendar-day-number">15</span>
+                                <div class="calendar-event reserved">BBVA — Firmado</div>
+                            </div>
+
+                            <!-- Week 4 -->
+                            <div class="calendar-day"><span class="calendar-day-number">16</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">17</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">18</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">19</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">20</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">21</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">22</span></div>
+
+                            <!-- Week 5 -->
+                            <div class="calendar-day"><span class="calendar-day-number">23</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">24</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">25</span></div>
+                            <div class="calendar-day today"><span class="calendar-day-number">26</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">27</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">28</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">29</span></div>
+
+                            <!-- Week 6 -->
+                            <div class="calendar-day"><span class="calendar-day-number">30</span></div>
+                            <div class="calendar-day"><span class="calendar-day-number">31</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">1</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">2</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">3</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">4</span></div>
+                            <div class="calendar-day other-month"><span class="calendar-day-number">5</span></div>
+                        </div>
+
+                        <!-- Blocks List -->
+                        <div class="mt-8">
+                            <h3 class="text-lg font-semibold mb-4">Bloqueos Activos</h3>
+                            <div class="table-container">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Marca</th>
+                                            <th>Fecha inicio</th>
+                                            <th>Fecha fin</th>
+                                            <th>Estado</th>
+                                            <th>Recurrente</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-medium">BBVA Argentina</td>
+                                            <td>01/01/2026</td>
+                                            <td>31/12/2026</td>
+                                            <td><span class="badge badge-danger">Firmado</span></td>
+                                            <td>Anual (2026-2028)</td>
+                                            <td>
+                                                <div class="flex gap-1">
+                                                    <button class="btn btn-ghost btn-icon btn-sm">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+                                                    </button>
+                                                    <button class="btn btn-ghost btn-icon btn-sm text-danger">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Galería -->
+                <div class="tab-content hidden" id="tab-galeria">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/padel-1/800/600" alt="Padel court 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/padel-2/800/600" alt="Padel court 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/padel-3/800/600" alt="Padel court 3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/padel-4/800/600" alt="Padel court 4">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/padel-5/800/600" alt="Padel court 5">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/padel-6/800/600" alt="Padel court 6">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <button class="lightbox-nav prev" onclick="prevImage()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <button class="lightbox-nav next" onclick="nextImage()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        // Tabs
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+
+                this.classList.add('active');
+                document.getElementById('tab-' + this.dataset.tab).classList.remove('hidden');
+            });
+        });
+
+        // Gallery lightbox
+        let currentImageIndex = 0;
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentImageIndex = index;
+                document.getElementById('lightboxImage').src = img.src;
+                document.getElementById('lightbox').classList.add('active');
+            });
+        });
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightboxImage').src = galleryImages[currentImageIndex].src;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            document.getElementById('lightboxImage').src = galleryImages[currentImageIndex].src;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevImage();
+                if (e.key === 'ArrowRight') nextImage();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club de Activos - Notificaciones">
+    <title>Notificaciones | Club de Activos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-logo">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#d69e2e"/>
+                        <path d="M10 22V10h4c3.314 0 6 2.686 6 6s-2.686 6-6 6h-4z" fill="#1a365d"/>
+                        <circle cx="22" cy="16" r="4" fill="#fff"/>
+                    </svg>
+                    <span>Club de Activos</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="7" height="9" x="3" y="3" rx="1"/>
+                        <rect width="7" height="5" x="14" y="3" rx="1"/>
+                        <rect width="7" height="9" x="14" y="12" rx="1"/>
+                        <rect width="7" height="5" x="3" y="16" rx="1"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="activos/index.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+                    </svg>
+                    <span>Activos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 2v4"/>
+                        <path d="M16 2v4"/>
+                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                        <path d="M3 10h18"/>
+                    </svg>
+                    <span>Calendario General</span>
+                </a>
+                <a href="notificaciones.html" class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+                    </svg>
+                    <span>Notificaciones</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="btn btn-ghost btn-icon" id="menuToggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"/>
+                            <line x1="4" x2="20" y1="6" y2="6"/>
+                            <line x1="4" x2="20" y1="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-right">
+                    <div class="dropdown">
+                        <button class="flex items-center gap-2">
+                            <div class="avatar">JQ</div>
+                            <span class="text-sm font-medium">Joaquín</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="page-content">
+                <div class="page-header flex justify-between items-center">
+                    <div>
+                        <h1 class="page-title">Notificaciones</h1>
+                        <p class="page-subtitle">Mantente al día con los vencimientos y actividad del portfolio</p>
+                    </div>
+                    <button class="btn btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 12 2 2 4-4"/>
+                            <path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z"/>
+                            <path d="M22 19H2"/>
+                        </svg>
+                        Marcar todas como leídas
+                    </button>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex gap-2 mb-6">
+                    <button class="btn btn-sm btn-primary">Todas</button>
+                    <button class="btn btn-sm btn-outline">Sin leer <span class="badge badge-danger ml-1">5</span></button>
+                    <button class="btn btn-sm btn-outline">Vencimientos</button>
+                    <button class="btn btn-sm btn-outline">Actividad</button>
+                </div>
+
+                <!-- Notifications List -->
+                <div class="card">
+                    <div class="notification-list">
+                        <!-- Unread - Urgent -->
+                        <div class="notification-item unread">
+                            <div class="notification-icon warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Vencimiento urgente:</strong> El contrato de <strong>Las Leñas Ski Resort</strong> con Renault Argentina vence en <span class="text-danger font-semibold">15 días</span>.
+                                </div>
+                                <div class="notification-time">hace 2 horas</div>
+                            </div>
+                            <div class="notification-dot"></div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+
+                        <!-- Unread -->
+                        <div class="notification-item unread">
+                            <div class="notification-icon warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Vencimiento próximo:</strong> El contrato de <strong>Ricky Martin — Abierto del Polo</strong> con Mastercard vence en <span class="text-warning font-semibold">45 días</span>.
+                                </div>
+                                <div class="notification-time">hace 5 horas</div>
+                            </div>
+                            <div class="notification-dot"></div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+
+                        <!-- Unread -->
+                        <div class="notification-item unread">
+                            <div class="notification-icon info">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 5v14"/>
+                                    <path d="M5 12h14"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Nuevo activo:</strong> Guada creó el activo <strong>Teatro Colón</strong>.
+                                </div>
+                                <div class="notification-time">hace 6 horas</div>
+                            </div>
+                            <div class="notification-dot"></div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+
+                        <!-- Unread -->
+                        <div class="notification-item unread">
+                            <div class="notification-icon info">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                                    <line x1="16" x2="16" y1="2" y2="6"/>
+                                    <line x1="8" x2="8" y1="2" y2="6"/>
+                                    <line x1="3" x2="21" y1="10" y2="10"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Bloqueo agregado:</strong> Nahuel agregó un bloqueo en <strong>BIG Gymnasium</strong> para Ford (en negociación).
+                                </div>
+                                <div class="notification-time">hace 8 horas</div>
+                            </div>
+                            <div class="notification-dot"></div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+
+                        <!-- Unread -->
+                        <div class="notification-item unread">
+                            <div class="notification-icon info">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Actualización:</strong> Fer actualizó el contrato de <strong>Arturo Navarro Hotels</strong>.
+                                </div>
+                                <div class="notification-time">ayer</div>
+                            </div>
+                            <div class="notification-dot"></div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+
+                        <!-- Read -->
+                        <div class="notification-item">
+                            <div class="notification-icon info">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="m9 12 2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Contrato firmado:</strong> Lucila cerró el contrato de <strong>La Uría</strong> con Garmin.
+                                </div>
+                                <div class="notification-time">hace 2 días</div>
+                            </div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+
+                        <!-- Read -->
+                        <div class="notification-item">
+                            <div class="notification-icon warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Recordatorio:</strong> El contrato de <strong>BBVA Padel Network</strong> entra en período de renovación en 58 días.
+                                </div>
+                                <div class="notification-time">hace 3 días</div>
+                            </div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+
+                        <!-- Read -->
+                        <div class="notification-item">
+                            <div class="notification-icon info">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-message">
+                                    <strong>Lead recibido:</strong> Nueva consulta de interés en <strong>Auditorio Mar del Plata</strong> de Banco Galicia.
+                                </div>
+                                <div class="notification-time">hace 5 días</div>
+                            </div>
+                            <a href="activos/detalle.html" class="btn btn-sm btn-outline">Ver activo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="text-center mt-6">
+                    <button class="btn btn-outline">Cargar más notificaciones</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

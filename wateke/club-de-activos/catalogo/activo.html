@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BBVA Padel Network - 150 canchas de padel premium para sponsoreo exclusivo">
+    <title>BBVA Padel Network | Club de Activos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body style="background-color: #f8fafc;">
+    <!-- Public Header -->
+    <header class="public-header">
+        <div class="public-header-inner">
+            <a href="index.html" class="public-logo">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#1a365d"/>
+                    <path d="M10 22V10h4c3.314 0 6 2.686 6 6s-2.686 6-6 6h-4z" fill="#d69e2e"/>
+                    <circle cx="22" cy="16" r="4" fill="#fff"/>
+                </svg>
+                Club de Activos
+            </a>
+            <nav class="public-nav">
+                <a href="index.html">Catálogo</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="../admin/login.html" class="btn btn-sm btn-outline">Acceso Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Breadcrumb -->
+        <nav class="mb-6">
+            <ol class="flex items-center gap-2 text-sm text-muted">
+                <li><a href="index.html" class="hover:text-primary">Catálogo</a></li>
+                <li>/</li>
+                <li><a href="index.html?category=deportes" class="hover:text-primary">Deportes</a></li>
+                <li>/</li>
+                <li class="text-gray-800 font-medium">BBVA Padel Network</li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="col-span-2">
+                <!-- Image Gallery -->
+                <div class="card mb-6 overflow-hidden">
+                    <div style="position: relative;">
+                        <img src="https://picsum.photos/seed/padel-bbva-hero/1200/600" alt="BBVA Padel Network" id="mainImage" style="width: 100%; height: 400px; object-fit: cover;">
+                    </div>
+                    <div class="card-body py-3">
+                        <div class="flex gap-3">
+                            <img src="https://picsum.photos/seed/padel-1/200/150" alt="Thumbnail 1" class="gallery-thumb" style="width: 100px; height: 75px; object-fit: cover; border-radius: 8px; cursor: pointer; opacity: 1;" onclick="changeImage(this)">
+                            <img src="https://picsum.photos/seed/padel-2/200/150" alt="Thumbnail 2" class="gallery-thumb" style="width: 100px; height: 75px; object-fit: cover; border-radius: 8px; cursor: pointer; opacity: 0.6;" onclick="changeImage(this)">
+                            <img src="https://picsum.photos/seed/padel-3/200/150" alt="Thumbnail 3" class="gallery-thumb" style="width: 100px; height: 75px; object-fit: cover; border-radius: 8px; cursor: pointer; opacity: 0.6;" onclick="changeImage(this)">
+                            <img src="https://picsum.photos/seed/padel-4/200/150" alt="Thumbnail 4" class="gallery-thumb" style="width: 100px; height: 75px; object-fit: cover; border-radius: 8px; cursor: pointer; opacity: 0.6;" onclick="changeImage(this)">
+                            <img src="https://picsum.photos/seed/padel-5/200/150" alt="Thumbnail 5" class="gallery-thumb" style="width: 100px; height: 75px; object-fit: cover; border-radius: 8px; cursor: pointer; opacity: 0.6;" onclick="changeImage(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Header -->
+                <div class="mb-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="badge badge-deportes">Deportes</span>
+                        <span class="badge badge-success">Disponible para Q2 2026</span>
+                    </div>
+                    <h1 class="text-3xl font-bold mb-2">BBVA Padel Network</h1>
+                    <div class="flex items-center gap-2 text-muted">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Buenos Aires, Argentina
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="card mb-6">
+                    <div class="card-header">
+                        <h2 class="text-lg font-semibold">Descripción</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted leading-relaxed mb-4">
+                            Red premium de 150 canchas de padel en Buenos Aires y alrededores. El BBVA Padel Network es la alianza estratégica más grande del país entre una institución financiera y el deporte de mayor crecimiento en Argentina.
+                        </p>
+                        <p class="text-muted leading-relaxed">
+                            Con presencia en los clubes más exclusivos de la región, ofrece oportunidades únicas de branding, activación y engagement con un público ABC1 altamente atractivo para marcas premium. La red cuenta con más de 50.000 usuarios activos mensuales y una app de reservas con marketplace integrado.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pilares de Valor -->
+                <div class="card mb-6">
+                    <div class="card-header">
+                        <h2 class="text-lg font-semibold">Pilares de Valor para tu Marca</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="pilares-grid">
+                            <div class="pilar-card">
+                                <div class="pilar-icon branding">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m3 11 18-5v12L3 14v-3z"/>
+                                        <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+                                    </svg>
+                                </div>
+                                <h3 class="pilar-title">Branding / Comunicación</h3>
+                                <p class="pilar-text">Naming rights en 150 canchas, cartelería digital, presencia en redes sociales con +500K seguidores, contenido exclusivo y cobertura de torneos.</p>
+                            </div>
+                            <div class="pilar-card">
+                                <div class="pilar-icon monetizacion">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 3v18h18"/>
+                                        <path d="m19 9-5 5-4-4-3 3"/>
+                                    </svg>
+                                </div>
+                                <h3 class="pilar-title">Monetización</h3>
+                                <p class="pilar-text">Venta de productos y servicios en puntos de venta físicos, app de reservas con marketplace integrado, promociones cruzadas con base de +50K usuarios activos.</p>
+                            </div>
+                            <div class="pilar-card">
+                                <div class="pilar-icon beneficios">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 12v10H4V12"/>
+                                        <path d="M2 7h20v5H2z"/>
+                                        <path d="M12 22V7"/>
+                                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+                                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="pilar-title">Beneficios</h3>
+                                <p class="pilar-text">Descuentos exclusivos para clientes del sponsor, acceso prioritario a torneos, programa de fidelización con puntos canjeables.</p>
+                            </div>
+                            <div class="pilar-card">
+                                <div class="pilar-icon experiencias">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                    </svg>
+                                </div>
+                                <h3 class="pilar-title">Experiencias</h3>
+                                <p class="pilar-text">Eventos VIP con jugadores profesionales, clínicas de padel para ejecutivos, torneos corporativos exclusivos, meet & greet con embajadores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Availability Calendar (Simplified) -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-lg font-semibold">Disponibilidad</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="flex gap-4 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span style="width: 16px; height: 16px; background-color: #d1fae5; border-radius: 4px;"></span>
+                                <span class="text-sm text-muted">Disponible</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span style="width: 16px; height: 16px; background-color: #e2e8f0; border-radius: 4px;"></span>
+                                <span class="text-sm text-muted">Reservado</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-4 gap-4">
+                            <div class="p-4 rounded-lg text-center" style="background-color: #e2e8f0;">
+                                <div class="text-sm font-medium">Q1 2026</div>
+                                <div class="text-xs text-muted mt-1">Reservado</div>
+                            </div>
+                            <div class="p-4 rounded-lg text-center" style="background-color: #d1fae5;">
+                                <div class="text-sm font-medium text-success">Q2 2026</div>
+                                <div class="text-xs text-success mt-1">Disponible</div>
+                            </div>
+                            <div class="p-4 rounded-lg text-center" style="background-color: #d1fae5;">
+                                <div class="text-sm font-medium text-success">Q3 2026</div>
+                                <div class="text-xs text-success mt-1">Disponible</div>
+                            </div>
+                            <div class="p-4 rounded-lg text-center" style="background-color: #d1fae5;">
+                                <div class="text-sm font-medium text-success">Q4 2026</div>
+                                <div class="text-xs text-success mt-1">Disponible</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div>
+                <!-- CTA Card -->
+                <div class="card mb-6" style="position: sticky; top: 100px;">
+                    <div class="card-body">
+                        <h3 class="text-lg font-semibold mb-2">¿Te interesa este activo?</h3>
+                        <p class="text-sm text-muted mb-6">Dejanos tus datos y el equipo de OpenCore te contactará a la brevedad para darte más información.</p>
+                        <button class="btn btn-primary w-full btn-lg" onclick="openInterestModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            Expresar Interés
+                        </button>
+                    </div>
+                    <div class="card-footer">
+                        <div class="flex items-center gap-2 text-sm text-muted">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                            </svg>
+                            Consulta sin compromiso
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Info -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="font-semibold">Información Rápida</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="flex flex-col gap-4">
+                            <div>
+                                <div class="text-sm text-muted mb-1">Categoría</div>
+                                <div class="font-medium">Deportes</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-muted mb-1">Ubicación</div>
+                                <div class="font-medium">Buenos Aires, Argentina</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-muted mb-1">Alcance</div>
+                                <div class="font-medium">150 canchas / +50K usuarios</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-muted mb-1">Disponibilidad</div>
+                                <div class="font-medium text-success">Desde Q2 2026</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sticky CTA (Mobile) -->
+    <div class="sticky-cta" style="display: none;">
+        <div class="sticky-cta-inner">
+            <div>
+                <div class="font-semibold">BBVA Padel Network</div>
+                <div class="text-sm text-success">Disponible desde Q2 2026</div>
+            </div>
+            <button class="btn btn-primary" onclick="openInterestModal()">Expresar Interés</button>
+        </div>
+    </div>
+
+    <!-- Interest Modal -->
+    <div class="modal-backdrop" id="interestModal">
+        <div class="modal" style="max-width: 500px;">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title">Expresar Interés</h3>
+                    <p class="text-sm text-muted mt-1">BBVA Padel Network</p>
+                </div>
+                <button class="modal-close" onclick="closeInterestModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6 6 18"/>
+                        <path d="m6 6 12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="interestForm">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="form-group">
+                            <label class="form-label required" for="nombre">Nombre</label>
+                            <input type="text" class="form-input" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required" for="apellido">Apellido</label>
+                            <input type="text" class="form-input" id="apellido" name="apellido" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required" for="empresa">Empresa</label>
+                        <input type="text" class="form-input" id="empresa" name="empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required" for="email">Email</label>
+                        <input type="email" class="form-input" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required" for="telefono">Teléfono</label>
+                        <input type="tel" class="form-input" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="mensaje">Mensaje (opcional)</label>
+                        <textarea class="form-textarea" id="mensaje" name="mensaje" rows="3" placeholder="Contanos qué te interesa de este activo..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ghost" onclick="closeInterestModal()">Cancelar</button>
+                <button class="btn btn-primary" onclick="submitInterest()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m22 2-7 20-4-9-9-4Z"/>
+                        <path d="M22 2 11 13"/>
+                    </svg>
+                    Enviar consulta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-backdrop" id="successModal">
+        <div class="modal" style="max-width: 400px;">
+            <div class="modal-body text-center py-8">
+                <div style="width: 80px; height: 80px; background-color: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">¡Gracias por tu interés!</h3>
+                <p class="text-muted mb-6">El equipo de OpenCore te va a contactar a la brevedad para darte más información sobre este activo.</p>
+                <button class="btn btn-primary" onclick="closeSuccessModal()">Volver al catálogo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="public-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                    <rect width="32" height="32" rx="8" fill="#d69e2e"/>
+                    <path d="M10 22V10h4c3.314 0 6 2.686 6 6s-2.686 6-6 6h-4z" fill="#1a365d"/>
+                    <circle cx="22" cy="16" r="4" fill="#fff"/>
+                </svg>
+                Club de Activos
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Catálogo</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+            </div>
+            <p class="footer-copyright">© 2026 OpenCore / Grupo Wateke</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function changeImage(thumb) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumb.src.replace('/200/150', '/1200/600');
+
+            document.querySelectorAll('.gallery-thumb').forEach(t => t.style.opacity = '0.6');
+            thumb.style.opacity = '1';
+        }
+
+        function openInterestModal() {
+            document.getElementById('interestModal').classList.add('active');
+        }
+
+        function closeInterestModal() {
+            document.getElementById('interestModal').classList.remove('active');
+        }
+
+        function submitInterest() {
+            const form = document.getElementById('interestForm');
+            if (form.checkValidity()) {
+                closeInterestModal();
+                document.getElementById('successModal').classList.add('active');
+            } else {
+                form.reportValidity();
+            }
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.remove('active');
+            window.location.href = 'index.html';
+        }
+
+        // Close modals on backdrop click
+        document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+            backdrop.addEventListener('click', (e) => {
+                if (e.target === backdrop) {
+                    backdrop.classList.remove('active');
+                }
+            });
+        });
+
+        // Show sticky CTA on mobile
+        if (window.innerWidth < 768) {
+            document.querySelector('.sticky-cta').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club de Activos - La plataforma exclusiva de oportunidades de sponsoreo en Argentina">
+    <title>Club de Activos | Oportunidades de Sponsoreo Exclusivas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body style="background-color: #f8fafc;">
+    <!-- Public Header -->
+    <header class="public-header">
+        <div class="public-header-inner">
+            <a href="index.html" class="public-logo">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#1a365d"/>
+                    <path d="M10 22V10h4c3.314 0 6 2.686 6 6s-2.686 6-6 6h-4z" fill="#d69e2e"/>
+                    <circle cx="22" cy="16" r="4" fill="#fff"/>
+                </svg>
+                Club de Activos
+            </a>
+            <nav class="public-nav">
+                <a href="index.html">Catálogo</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="../admin/login.html" class="btn btn-sm btn-outline">Acceso Admin</a>
+            </nav>
+            <button class="btn btn-ghost btn-icon" id="mobileMenuToggle" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">La plataforma exclusiva de oportunidades de sponsoreo</h1>
+            <p class="hero-subtitle">Conectamos marcas con los activos de sponsoreo más premium de Argentina: canchas de padel, centros de esquí, hoteles boutique, teatros y eventos en vivo.</p>
+            <a href="#catalogo" class="hero-cta">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.3-4.3"/>
+                </svg>
+                Explorar activos disponibles
+            </a>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section" id="catalogo">
+        <div class="filters-inner">
+            <div class="input-group" style="flex: 1; max-width: 400px;">
+                <span class="input-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.3-4.3"/>
+                    </svg>
+                </span>
+                <input type="text" class="form-input" placeholder="Buscar activo..." id="searchInput">
+            </div>
+            <select class="form-select" style="width: 200px;" id="categoryFilter">
+                <option value="">Todas las categorías</option>
+                <option value="deportes">Deportes</option>
+                <option value="naturaleza">Naturaleza/Outdoor</option>
+                <option value="hoteleria">Hotelería</option>
+                <option value="eventos">Eventos en Vivo</option>
+                <option value="cultural">Cultural</option>
+            </select>
+            <select class="form-select" style="width: 200px;" id="locationFilter">
+                <option value="">Todas las ubicaciones</option>
+                <option value="buenosaires">Buenos Aires</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="mardelplata">Mar del Plata</option>
+                <option value="nacional">Nacional</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-semibold">Activos Disponibles</h2>
+            <span class="text-sm text-muted">8 activos encontrados</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6" id="assetsGrid">
+            <!-- BBVA Padel Network -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/padel-bbva/800/450" alt="BBVA Padel Network">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-deportes">Deportes</span>
+                    </div>
+                    <h3 class="asset-card-title">BBVA Padel Network</h3>
+                    <p class="text-sm text-muted mb-3">150 canchas de padel premium en Buenos Aires</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Buenos Aires, Argentina
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="text-sm text-muted">Reservado hasta Dic 2026</span>
+                </div>
+            </a>
+
+            <!-- Las Leñas Ski Resort -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/ski-resort-las-lenas/800/450" alt="Las Leñas Ski Resort">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-naturaleza">Naturaleza/Outdoor</span>
+                    </div>
+                    <h3 class="asset-card-title">Las Leñas Ski Resort</h3>
+                    <p class="text-sm text-muted mb-3">Centro de esquí premium en Mendoza</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Mendoza, Argentina
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="badge badge-success">Disponible</span>
+                </div>
+            </a>
+
+            <!-- BIG Gymnasium -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/gym-big/800/450" alt="BIG Gymnasium">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-deportes">Deportes</span>
+                    </div>
+                    <h3 class="asset-card-title">BIG Gymnasium</h3>
+                    <p class="text-sm text-muted mb-3">Cadena de gimnasios de alto rendimiento</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Buenos Aires, Argentina
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="badge badge-success">Disponible</span>
+                </div>
+            </a>
+
+            <!-- Arturo Navarro Hotels -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/hotel-luxury/800/450" alt="Arturo Navarro Hotels">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-hoteleria">Hotelería</span>
+                    </div>
+                    <h3 class="asset-card-title">Arturo Navarro Hotels</h3>
+                    <p class="text-sm text-muted mb-3">Red de 33 hoteles boutique en Argentina</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Argentina (nacional)
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="badge badge-success">Disponible</span>
+                </div>
+            </a>
+
+            <!-- Auditorio Mar del Plata -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/theater-auditorium/800/450" alt="Auditorio Mar del Plata">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-cultural">Cultural</span>
+                    </div>
+                    <h3 class="asset-card-title">Auditorio Mar del Plata</h3>
+                    <p class="text-sm text-muted mb-3">Principal auditorio de la costa atlántica</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Mar del Plata, Argentina
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="badge badge-success">Disponible</span>
+                </div>
+            </a>
+
+            <!-- La Uría -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/concert-venue/800/450" alt="La Uría">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-eventos">Eventos en Vivo</span>
+                    </div>
+                    <h3 class="asset-card-title">La Uría</h3>
+                    <p class="text-sm text-muted mb-3">120 eventos anuales de alta convocatoria</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Buenos Aires, Argentina
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="text-sm text-muted">En negociación</span>
+                </div>
+            </a>
+
+            <!-- Teatro Colón -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/theater-colon/800/450" alt="Teatro Colón">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-cultural">Cultural</span>
+                    </div>
+                    <h3 class="asset-card-title">Teatro Colón</h3>
+                    <p class="text-sm text-muted mb-3">Icono cultural de Argentina y el mundo</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Buenos Aires, Argentina
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="badge badge-success">Disponible</span>
+                </div>
+            </a>
+
+            <!-- Ricky Martin — Abierto del Polo -->
+            <a href="activo.html" class="asset-card">
+                <div class="asset-card-image">
+                    <img src="https://picsum.photos/seed/concert-polo/800/450" alt="Ricky Martin — Abierto del Polo">
+                </div>
+                <div class="asset-card-body">
+                    <div class="asset-card-badges">
+                        <span class="badge badge-eventos">Eventos en Vivo</span>
+                    </div>
+                    <h3 class="asset-card-title">Ricky Martin — Abierto del Polo</h3>
+                    <p class="text-sm text-muted mb-3">Evento exclusivo de cierre de temporada</p>
+                    <div class="asset-card-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Buenos Aires, Argentina
+                    </div>
+                </div>
+                <div class="asset-card-footer">
+                    <span class="text-sm text-muted">En negociación</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="public-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                    <rect width="32" height="32" rx="8" fill="#d69e2e"/>
+                    <path d="M10 22V10h4c3.314 0 6 2.686 6 6s-2.686 6-6 6h-4z" fill="#1a365d"/>
+                    <circle cx="22" cy="16" r="4" fill="#fff"/>
+                </svg>
+                Club de Activos
+            </div>
+            <div class="footer-links">
+                <a href="#">Catálogo</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+            </div>
+            <p class="footer-copyright">© 2026 OpenCore / Grupo Wateke. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
